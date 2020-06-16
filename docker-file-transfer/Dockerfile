@@ -12,7 +12,7 @@ rm -f /lib/systemd/system/anaconda.target.wants/*;
 VOLUME [ "/sys/fs/cgroup" ]
 CMD ["/usr/sbin/init"]
 WORKDIR /opt
-RUN curl -sL https://rpm.nodesource.com/setup_10.x | sudo bash -
-RUN sudo yum install nodejs
+RUN curl -sL https://rpm.nodesource.com/setup_10.x | bash -
+RUN yum install nodejs
 RUN echo node --version
-RUN ehco npm --version
+RUN echo npm --version
